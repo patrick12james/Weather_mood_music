@@ -1,8 +1,12 @@
 from app import app
+from flask import render_template
 
 @app.route('/')
 def index():
-    return 'Hello World'
+    my_name = 'Patrick'
+    my_city = 'American Canyon'
+    foods = ['pizza', 'italian food', 'french fries', 'donuts', 'mexican food', 'fruit']
+    return render_template('index.html', name=my_name, city=my_city, foods=foods)
 
 @app.route('/name')
 def name():
