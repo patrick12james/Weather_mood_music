@@ -8,10 +8,12 @@ def index():
     foods = ['pizza', 'italian food', 'french fries', 'donuts', 'mexican food', 'fruit']
     return render_template('index.html', name=my_name, city=my_city, foods=foods)
 
+
 @app.route('/name')
 def name():
     my_name = 'Patrick'
-    return f'Hello {my_name}'
+
+    return render_template('name.html', name=my_name)
 
 @app.route('/test')
 def test():
