@@ -6,7 +6,12 @@ def index():
     my_name = 'Patrick'
     my_city = 'American Canyon'
     foods = ['pizza', 'italian food', 'french fries', 'donuts', 'mexican food', 'fruit']
-    return render_template('index.html', name=my_name, city=my_city, foods=foods)
+    person = {
+        'name': 'Ferris Bueller',
+        'age': 18,
+        'best_friend': 'Cameron'
+    }
+    return render_template('index.html', name=my_name, city=my_city, foods=foods, person=person)
 
 
 @app.route('/name')
