@@ -1,5 +1,6 @@
 from app import app
 from flask import render_template
+from app.forms import RegisterForm
 
 @app.route('/')
 def index():
@@ -20,6 +21,7 @@ def name():
 
     return render_template('name.html', name=my_name)
 
-@app.route('/test')
-def test():
-    return '<h1>This is not a test!<h1>'
+@app.route('/register')
+def register():
+    form = RegisterForm()
+    return render_template('register.html', form=form)

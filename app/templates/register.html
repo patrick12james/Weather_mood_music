@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block content %}
+    <h1>Register Here</h1>
+
+    <form>
+        <div class="form-group">
+            <fieldset>
+            {{ form.username.label }}
+            {{ form.username }}
+
+            </fieldset>
+        </div>
+        {{ form.email }}
+        {{ form.password }}
+        {{ form.submit }}
+    </form>
+{% endblock %}
