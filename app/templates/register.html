@@ -8,6 +8,7 @@
     <h1>Register Here</h1>
 
     <form>
+        {{ form.csrf_token }}
         <div class="form-group">
             <fieldset>
             {{ form.username.label }}
